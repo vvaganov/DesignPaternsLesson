@@ -1,4 +1,4 @@
-package users
+package dogs
 
 import java.awt.Dimension
 import java.awt.Font
@@ -7,8 +7,7 @@ import javax.swing.JFrame
 import javax.swing.JScrollPane
 import javax.swing.JTextArea
 
-class Display {
-
+class DisplayDogs {
 
     fun show() {
         val textArea = JTextArea().apply {
@@ -24,9 +23,9 @@ class Display {
             isResizable = false
             add(scrollPane)
         }
-        UserRepository
+        DogRepository
             .getInstance()
-            .listUsers
+            .listDogs
             .joinToString("\n")
             .let { textArea.text = it }
     }

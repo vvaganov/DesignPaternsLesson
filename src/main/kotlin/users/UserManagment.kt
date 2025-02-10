@@ -1,5 +1,5 @@
 package users
 
 fun main() {
-    UserRepository.getInstance().listUsers.forEach(::println)
+    Display().show()
 }

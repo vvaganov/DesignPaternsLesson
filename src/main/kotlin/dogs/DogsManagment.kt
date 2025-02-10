@@ -1,4 +1,8 @@
 package dogs
 
-fun main() {DogRepository.getInstance().listDogs.forEach(::println)
+import users.Display
+
+
+fun main() {
+    DisplayDogs().show()
 }
